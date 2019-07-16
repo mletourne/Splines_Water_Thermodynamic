@@ -17,6 +17,19 @@ In order to compute the desired properties the user should call one of the follo
 
 Each of those functions present a brief description on how to use them.
 
+The default structure of the output file is the following:
+
+  output = [sample_1, sample_2, ..., sample_n]
+
+each sample has the following structure:
+
+  sample = [fluid properties, [vapour phase properties], [liquid phase properties]]
+  
+ The default ordering of the properties is the follwing:
+ 
+  properties = [enthalpy, pressure, density, temperature, viscosity, saturation]
+
+
 Copyright (c) 2019 Martin LETOURNEUR
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
