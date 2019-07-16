@@ -1341,7 +1341,7 @@ def _eval(spl_obj, x, y):
     tx, ty, c = spl_obj['tx'], spl_obj['ty'], spl_obj['c']
     kx, ky = spl_obj['kx'], spl_obj['ky']
     z, ier = dfitpack.bispev(tx,ty,c,kx,ky,x,y)
-    return z
+    return z[0][0]
 
 
 def _derr_eval(spl_obj, x, y, dx, dy):
@@ -1359,7 +1359,7 @@ def _derr_eval(spl_obj, x, y, dx, dy):
     tx, ty, c = spl_obj['tx'], spl_obj['ty'], spl_obj['c']
     kx, ky = spl_obj['kx'], spl_obj['ky']
     z, ier = dfitpack.parder(tx, ty, c, kx,ky, dx,dy, x, y)
-    return z
+    return z[0][0]
 
 
 # ----------------------------------------------------------------------------------------------------------------------
