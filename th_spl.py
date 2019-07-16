@@ -25,9 +25,13 @@ each sample has the following structure:
 
   sample = [fluid properties, [vapour phase properties], [liquid phase properties]]
   
- The default ordering of the properties is the follwing:
+ The default ordering of the properties is the following:
  
   properties = [enthalpy, pressure, density, temperature, viscosity, saturation]
+  
+ If derivatives are involved, then:
+ 
+  properties = [enthalpy, pressure, dh, dp, density, temperature, viscosity, saturation]
 
 
 Copyright (c) 2019 Martin LETOURNEUR
